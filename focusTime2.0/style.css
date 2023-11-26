@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-BtnMusic: #E1E1E6;
+    --bg-secondary: #02799D;
+    --color-tt: #323238;
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+body, button {
+    color:  var(--color-tt);
+}
+
+#app {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly ;
+    height: 100vh;
+}
+
+#timer {
+    display: flex;
+    font-family: sans-serif;
+    font-size: 9.6rem;
+}
+
+#controls {
+    display: flex;
+    margin-top: 1.6rem;
+    justify-content: space-between;
+}
+
+#controls button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 4.8rem;
+    transition: transform .3s;
+}
+
+#controls button:hover {
+    transform: scale(1.1);
+}
+
+/* setup-music */
+
+#music {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+#music button {
+    background-color: var(--bg-BtnMusic);
+    padding: 3rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 4.6rem;
+    height: 12.5rem;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+#music button:hover {
+    transform: scale(1.2);
+}
+
+#music .secondary {
+    background-color: var(--bg-secondary);
+    color: white;
+    transform: scale(1.1);
+}
+
+
+.running .ph-play-circle{
+    transform: scale(1.2);
+    color: var(--bg-secondary);
+}
